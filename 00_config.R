@@ -17,17 +17,17 @@ dir.create(table_dir, showWarnings = FALSE, recursive = TRUE)
 dir.create(object_dir, showWarnings = FALSE, recursive = TRUE)
 
 # Edit these paths for your Linux system.
-countdata_rdata <- "/project/home/ono/Practical/data/countdata"
-metadata_DP_csv <- "/project/home/ono/Practical/data/metadata_DP.csv"
-metadata_SP_csv <- "/project/home/ono/Practical/data/metadata_SP.csv"
-key_gene_file   <- "/project/data/ono/Practical/data/key_genes_to_display.txt"
-msigdb_mouse_c7 <- "/project/home/ono/Practical/data/mouse_c7_v5p2.rdata"
+countdata_rdata <- "/filepath/countdata"
+metadata_DP_csv <- "/filepath/metadata_DP.csv"
+metadata_SP_csv <- "/filepath/metadata_SP.csv"
+key_gene_file   <- "/filepath/key_genes_to_display.txt"
+msigdb_mouse_c7 <- "/filepath/mouse_c7_v5p2.rdata"
 
 # DESeq2 contrast is target minus reference.
 # Positive log2FC = higher in target.
 # Negative log2FC = higher in reference.
-target_group    <- "SP_BR_HET"
-reference_group <- "DP_B_HET"
+target_group    <- "A" # A can be any grouof interest
+reference_group <- "B" # Same as B
 comparison_name <- paste0(target_group, "_minus_", reference_group)
 
 padj_cutoff <- 0.05
