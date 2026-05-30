@@ -17,7 +17,7 @@ dir.create(table_dir, showWarnings = FALSE, recursive = TRUE)
 dir.create(object_dir, showWarnings = FALSE, recursive = TRUE)
 
 # Edit these paths for your Linux system.
-countdata_rdata <- "/filepath/countdata"
+countdata_rdata <- "/filepath/countdata" # Rows = genes, Columns = samples, Values = raw read counts
 metadata_DP_csv <- "/filepath/metadata_DP.csv"
 metadata_SP_csv <- "/filepath/metadata_SP.csv"
 key_gene_file   <- "/filepath/key_genes_to_display.txt"
