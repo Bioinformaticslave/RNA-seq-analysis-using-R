@@ -12,6 +12,7 @@ suppressPackageStartupMessages({
 
 dds <- readRDS(file.path(object_dir, "dds_fitted.rds"))
 
+# perform vsd transformation for more convenient later analysis
 vsd <- vst(dds, blind = FALSE)
 saveRDS(vsd, file.path(object_dir, "vsd.rds"))
 
@@ -28,7 +29,9 @@ p <- ggplot(pca_data, aes(x = PC1, y = PC2, color = group)) +
   ) +
   theme_bw() +
   theme(plot.title = element_text(hjust = 0.5))
+# modify the Principal Component level accordingly for interest
 
+# save the file accordingly
 ggsave(
   filename = file.path(plot_dir, "01_PCA_all_samples.pdf"),
   plot = p,
@@ -36,5 +39,3 @@ ggsave(
   height = 6,
   dpi = plot_dpi
 )
-
-cat("PCA plot saved\\n")
