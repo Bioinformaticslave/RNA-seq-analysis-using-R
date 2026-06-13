@@ -18,8 +18,8 @@ dir.create(object_dir, showWarnings = FALSE, recursive = TRUE)
 
 # Edit these paths for your Linux system.
 countdata_rdata <- "/filepath/countdata" # Rows = genes, Columns = samples, Values = raw read counts
-metadata_DP_csv <- "/filepath/metadata_DP.csv"
-metadata_SP_csv <- "/filepath/metadata_SP.csv"
+metadata_DP_csv <- "/filepath/metadata_1.csv"
+metadata_SP_csv <- "/filepath/metadata_2.csv"
 key_gene_file   <- "/filepath/key_genes_to_display.txt"
 msigdb_mouse_c7 <- "/filepath/mouse_c7_v5p2.rdata"
 
@@ -33,6 +33,6 @@ comparison_name <- paste0(target_group, "_minus_", reference_group)
 padj_cutoff <- 0.05
 lfc_cutoff  <- 1
 
-candidate_genes <- c("Gimap3", "Ccr7", "Cd69", "Bcl2l11")
+candidate_genes <- c("Gene1", "Gene2")
 
 plot_dpi <- 300
