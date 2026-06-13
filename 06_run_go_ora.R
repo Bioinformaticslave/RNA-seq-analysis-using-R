@@ -1,6 +1,7 @@
 ###############################
 # 06_run_go_ora.R
 # GO Biological Process ORA
+# ORA usd when GSEA returns no significantly enriched pathway which is very common due to database limit.
 ###############################
 
 source("R/00_config.R")
