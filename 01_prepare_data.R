@@ -11,12 +11,13 @@ suppressPackageStartupMessages({
 
 load(countdata_rdata)   # expected object: countdata
 
-metadata_DP <- read.csv(metadata_DP_csv, row.names = 1, stringsAsFactors = FALSE)
-metadata_SP <- read.csv(metadata_SP_csv, row.names = 1, stringsAsFactors = FALSE)
+metadata_1 <- read.csv(metadata_1_csv, row.names = 1, stringsAsFactors = FALSE)
+metadata_2 <- read.csv(metadata_2_csv, row.names = 1, stringsAsFactors = FALSE)
 
-metadata_DP$source <- "DP"
-metadata_SP$source <- "SP"
-metadata_all <- rbind(metadata_DP, metadata_SP)
+# If required, combine two metadata into one for further analysis.
+metadata_1$source <- "1"
+metadata_2$source <- "2"
+metadata_all <- rbind(metadata_1, metadata_2)
 
 counts_all <- countdata[, rownames(metadata_all)]
 
