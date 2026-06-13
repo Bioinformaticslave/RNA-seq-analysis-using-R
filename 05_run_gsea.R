@@ -15,8 +15,8 @@ suppressPackageStartupMessages({
 
 result <- read.csv(file.path(table_dir, paste0(comparison_name, "_all_genes.csv")))
 
-load(msigdb_mouse_c7)  # expected object: Mm.c7
-pathways <- Mm.c7
+load(database_you_are_interested)  # modify database accordingly
+pathways <- database
 
 result$entrez <- mapIds(
   org.Mm.eg.db,
